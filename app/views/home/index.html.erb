@@ -8,6 +8,14 @@
       Click here
     </button>
   </div>
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <p><%= link_to "照明ON", home_light_on_path, remote: true, class: 'btn btn-primary' %></p>
+        <p><%= link_to "照明OFF", home_light_off_path, remote: true, class: 'btn btn-primary' %></p>
+      </div>
+    </div>
+  </div>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
