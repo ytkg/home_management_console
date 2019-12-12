@@ -1,3 +1,7 @@
-.amesh {
+#amesh {
+  height: 300px;
+}
+#amesh > img {
   position: absolute;
+  width: 480px;
 }
