@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'webpacker'#, '~> 3.5'
 
+gem 'active_hash', '~> 2.3.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
