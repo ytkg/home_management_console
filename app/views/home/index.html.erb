@@ -1,12 +1,8 @@
 <div class="container">
-  <div class="jumbotron m-3">
-    <h1 class="display-4">Hello, Bootstrap!</h1>
-    <hr class="my-4">
-    <p>This is the template of Ruby on Rails using Bootstrap.</p>
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
-      <i class="far fa-window-maximize"></i>
-      Click here
-    </button>
+  <div class="card-deck mb-3">
+    <div class="card p-3">
+      <%= line_chart (7.days.ago.to_date..1.days.ago.to_date).map{|d| [d, rand(300..10000)]} %>
+    </div>
   </div>
   <div class="card-deck">
     <div class="card">
@@ -21,25 +17,6 @@
           <%= image_tag 'https://tokyo-ame.jwa.or.jp/map/map000.jpg' %>
           <%= image_tag "https://tokyo-ame.jwa.or.jp/mesh/000/#{Time.now.strftime('%Y%m%d%H00')}.gif" %>
           <%= image_tag 'https://tokyo-ame.jwa.or.jp/map/msk000.png' %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Hello!
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

@@ -35,6 +35,8 @@ gem 'webpacker'#, '~> 3.5'
 
 gem 'active_hash', '~> 2.3.0'
 
+gem 'chartkick'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
