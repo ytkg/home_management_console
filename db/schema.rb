@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_16_161329) do
+ActiveRecord::Schema.define(version: 2019_12_17_045425) do
+
+  create_table "sensors", force: :cascade do |t|
+    t.decimal "temperature", precision: 4, scale: 1
+    t.decimal "humidity", precision: 4, scale: 1
+    t.decimal "illumination", precision: 4, scale: 1
+    t.decimal "movement", precision: 4, scale: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "stocks", force: :cascade do |t|
     t.string "name", null: false
