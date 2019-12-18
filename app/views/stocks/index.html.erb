@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Stocks</h1>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">URL</th>
+        <th scope="col">IS_EMPTY</th>
+        <th scope="col">SORT_NUMBER</th>
+        <th scope="col" colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @stocks.each do |stock| %>
+        <tr>
+          <td><%= stock.name %></td>
+          <td><%= link_to stock.url, stock.url, target: '_blank' %></td>
+          <td><%= stock.is_empty %></td>
+          <td><%= stock.sort_number %></td>
+          <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
+          <td><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  
+  <%= link_to 'New Stock', new_stock_path %>
+</div>
