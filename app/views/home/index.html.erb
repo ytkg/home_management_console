@@ -1,14 +1,17 @@
 <div class="container">
-  <div class="card-deck mb-3">
-    <div class="card p-3">
-      <%= line_chart (7.days.ago.to_date..1.days.ago.to_date).map{|d| [d, rand(300..10000)]} %>
-    </div>
-  </div>
   <div class="card-deck">
     <div class="card">
       <div class="card-body">
         <%= link_to "照明ON", home_light_on_path, remote: true, class: 'btn btn-primary', style: 'width:150px;height:150px;line-height:140px;font-size:2em;' %>
         <%= link_to "照明OFF", home_light_off_path, remote: true, class: 'btn btn-primary', style: 'width:150px;height:150px;line-height:140px;font-size:2em;'%>
+      </div>
+    </div>
+  </div>
+  <div class="m-2"></div>
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <%= line_chart (7.days.ago.to_date..1.days.ago.to_date).map{|d| [d, rand(300..10000)]} %>
       </div>
     </div>
     <div class="card">
