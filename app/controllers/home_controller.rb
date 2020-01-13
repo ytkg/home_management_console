@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @gomi_calendars = GomiCalendar.where(date: Date.today..Date.tomorrow)
   end
 
   def light_on
