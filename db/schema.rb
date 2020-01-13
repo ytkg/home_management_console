@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_17_045425) do
+ActiveRecord::Schema.define(version: 2020_01_13_060148) do
+
+  create_table "gomi_calendars", force: :cascade do |t|
+    t.date "date"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "sensors", force: :cascade do |t|
     t.decimal "temperature", precision: 4, scale: 1

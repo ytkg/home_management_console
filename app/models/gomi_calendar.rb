@@ -1,0 +1,2 @@
+class GomiCalendar < ApplicationRecord
+end
